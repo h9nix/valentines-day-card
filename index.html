@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днем Святого Валентина!</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f7f3e7; /* Молочно-белый фон */
+            color: #2e8b57; /* Травяной цвет шрифта */
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .heart {
+            font-size: 150px;
+            color: #8b4513; /* Древесный цвет */
+            margin: 20px 0;
+            animation: pulse 1.5s infinite; /* Пульсация сердечка */
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 2s 1s ease-out forwards;
+            max-width: 600px;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .music-container {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Мобильная адаптация */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .heart {
+                font-size: 120px;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Встраиваем музыку с Яндекс Музыки с автозапуском -->
+    <div class="music-container">
+        <iframe src="https://music.yandex.ru/iframe/track/64029319/10240639?autoplay=true" frameborder="0" allow="clipboard-write" width="100%" height="210">
+            Слушайте Камин — EMIN на Яндекс Музыке
+        </iframe>
+    </div>
+
+    <!-- Заголовок с поздравлением -->
+    <h1>С Днем Святого Валентина!</h1>
+
+    <!-- Сердечко в древесном стиле -->
+    <div class="heart">❤️</div>
+
+    <!-- Текст поздравления -->
+    <p>С каждым днем твоя любовь становится для меня бесценным даром. Пусть этот день напомнит нам о том, как важна забота, как прекрасна наша связь и как много радости мы можем дарить друг другу.</p>
+    
+    <!-- Заключительное сообщение -->
+    <p>С любовью и нежностью, твой Валентин!</p>
+
+    <script>
+        // Для автозапуска музыки после загрузки страницы
+        window.onload = function() {
+            var iframe = document.querySelector('iframe');
+            iframe.src += "&autoplay=true";
+        };
+    </script>
+</body>
+</html>
