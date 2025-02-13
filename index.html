@@ -47,7 +47,7 @@
 
         .music-container {
             width: 100%;
-            margin-bottom: 20px;
+            margin-bottom: 50px; /* Увеличиваем нижнее пространство */
         }
 
         /* Стили для аудиоплеера */
@@ -98,16 +98,11 @@
 <body>
     <!-- Встраиваем аудиоплеер с автозапуском -->
     <div class="music-container">
-        <audio id="audio" preload="auto" autoplay>
+        <audio id="audio" preload="auto" autoplay controls>
             <source src="https://h9nix.github.io/your-repository-name/jonykamin.mp3" type="audio/mp3">
             Ваш браузер не поддерживает аудио.
         </audio>
     </div>
-    <!-- Аудио с музыкой Jony - Камин -->
-    <audio id="audio" preload="auto" autoplay>
-        <source src="https://username.github.io/valentines-day-card/jonykamin.mp3" type="audio/mp3">
-        Ваш браузер не поддерживает аудио.
-    </audio>
     <!-- Встраиваем музыку с Яндекс Музыки с автозапуском -->
     <div class="music-container">
         <iframe src="https://music.yandex.ru/iframe/track/64029319/10240639?autoplay=true" frameborder="0" allow="clipboard-write" width="100%" height="210">
@@ -136,3 +131,4 @@
     </script>
 </body>
 </html>
+
