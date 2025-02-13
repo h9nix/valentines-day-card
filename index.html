@@ -50,6 +50,13 @@
             margin-bottom: 20px;
         }
 
+        /* Стили для аудиоплеера */
+        audio {
+            width: 100%;
+            max-width: 400px;  /* Ограничение ширины плеера */
+            margin-top: 20px;
+        }
+
         /* Анимации */
         @keyframes fadeIn {
             from {
@@ -88,16 +95,17 @@
         }
     </style>
 </head>
-<body onload="startMusic()">
-    <!-- Встраиваем музыку с Яндекс Музыки с автозапуском -->
+<body>
+    <!-- Встраиваем аудиоплеер с автозапуском -->
     <div class="music-container">
-        <iframe src="https://music.yandex.ru/iframe/track/64029319/10240639?autoplay=true" frameborder="0" allow="clipboard-write" width="100%" height="210">
-            Слушайте Камин — EMIN на Яндекс Музыке
-        </iframe>
+        <audio id="audio" preload="auto" autoplay>
+            <source src="https://h9nix.github.io/your-repository-name/jony_kamin.mp3" type="audio/mp3">
+            Ваш браузер не поддерживает аудио.
+        </audio>
     </div>
 
     <!-- Заголовок с поздравлением -->
-    <h1>С Днем Святого Валентина!</h1>
+    <h1>С Днем Свсех влюбленных!</h1>
 
     <!-- Сердечко в древесном стиле -->
     <div class="heart">❤️</div>
@@ -106,20 +114,14 @@
     <p>С каждым днем твоя любовь становится для меня бесценным даром. Пусть этот день напомнит нам о том, как важна забота, как прекрасна наша связь и как много радости мы можем дарить друг другу.</p>
     
     <!-- Заключительное сообщение -->
-    <p>С любовью и нежностью, твой Валентин!</p>
-
-    <!-- Аудио с музыкой Jony - Камин -->
-    <audio id="audio" preload="auto" autoplay>
-       <source src="https://h9nix.github.io/valentines-day-card/jony_kamin.mp3" type="audio/mp3">
-        Ваш браузер не поддерживает аудио.
-    </audio>
+    <p>С любовью и нежностью, твой Муж!</p>
 
     <script>
         // Для автозапуска музыки после загрузки страницы
-        function startMusic() {
+        window.onload = function() {
             var audio = document.getElementById("audio");
             audio.play();
-        }
+        };
     </script>
 </body>
 </html>
